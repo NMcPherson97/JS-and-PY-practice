@@ -1,19 +1,20 @@
 function getSleepHours(day){
     if (day === 'monday'){
-        return 5
+        return 8
     }else if(day === 'tuesday'){
-        return 6
+        return 8
     }else if(day === 'wednesday'){
-      return 6
+      return 8
     }else if(day === 'thursday'){
-      return 7
+      return 8
     }else if(day === 'friday'){
-      return 9
+      return 8
     }else if(day==='saturday' | day==='sunday'){
       return 10
     }
 }
 
+// Need to fix getActualSleepHours function
 function getActualSleepHours(){
     return getSleepHours('monday')
     return getSleepHours('tuesday')

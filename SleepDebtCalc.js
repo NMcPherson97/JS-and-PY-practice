@@ -1,28 +1,30 @@
-function getSleepHours(day){
+function sleepHours(day){
     if (day === 'monday'){
-        return 8
+        return 3
     }else if(day === 'tuesday'){
-        return 8
+        return 5
     }else if(day === 'wednesday'){
-      return 8
+      return 4
     }else if(day === 'thursday'){
       return 8
     }else if(day === 'friday'){
-      return 8
-    }else if(day==='saturday' | day==='sunday'){
+      return 6
+    }else if(day==='saturday'){
       return 10
+    }else if(day==='sunday'){
+        return 9
     }
 }
 
 // Need to fix getActualSleepHours function
 function getActualSleepHours(){
-    return getSleepHours('monday')
-    return getSleepHours('tuesday')
-    return getSleepHours('wednesday')
-    return getSleepHours('thursday')
-    return getSleepHours('friday')
-    return getSleepHours('saturday')
-    return getSleepHours('sunday')
+    return sleepHours('monday')
+    return sleepHours('tuesday')
+    return sleepHours('wednesday')
+    return sleepHours('thursday')
+    return sleepHours('friday')
+    return sleepHours('saturday')
+    return sleepHours('sunday')
 }
 console.log(getActualSleepHours())
 

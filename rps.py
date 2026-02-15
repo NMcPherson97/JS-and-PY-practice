@@ -11,9 +11,6 @@ def user_choice():
     else:
         print(f"User's choice: {choice}")
     
-
-    
-
 def comp_choice():
     choice = ['rock','paper','scissors']
     return random.choice(choice)

@@ -8,11 +8,6 @@ day_sleep_ideal = {'Monday':8,
                    'Saturday':10,
                    'Sunday':10}
 
-#Create function to iterate (ideal)sleep hour values 
-def get_sleep_hours(day):
-    for hours in day_sleep_ideal.values():
-        return hours
-
 #Actual sleep hours dictionary
 day_sleep_actual = {
     'Monday':3,
@@ -23,28 +18,21 @@ day_sleep_actual = {
     'Saturday':10,
     'Sunday':9}
 
+  
+
 
 #Fix sleep_debt function. Keeps printing 'you need to get 5 more hours of sleep' regardless of argument.
 def sleep_debt(day):
-    sleep_actual = list(day_sleep_actual.values())
-    sleep_ideal = list(day_sleep_ideal.values())
-    for hours in sleep_actual:
-        for h in sleep_ideal:
-            if hours == h:
-                return "You got enough sleep!"
-            elif hours <= h:
-                return f"You need to get {h - hours} more hours of sleep!"
-            elif h > hours:
-                return f"You overslept by {hours - h} hours."
-# Nested loop attempt 1:
-    # for hours in day_sleep_actual.values():
-    #     for h in day_sleep_ideal.values():
-    #         if hours == h:
-    #             return "Congratulations on getting enough sleep!"
-    #         elif hours <= h:
-    #             return f"You need to get {h - hours} more hours of sleep!"
-    #         elif hours > h:
-    #             return f"You overslept by {h} hours!"
+    if day_sleep_actual[day] == day_sleep_ideal[day]:
+        return 'You got the perfect amount of sleep'
+    elif day_sleep_actual[day] > day_sleep_ideal[day]:
+        return 'You got more sleep than needed'
+    else:
+        return f'You need to get {day_sleep_ideal[day] - day_sleep_actual[day]} more hours of sleep'
+            
+
+
+print(sleep_debt('Tuesday'))
 
 
 

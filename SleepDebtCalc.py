@@ -18,10 +18,7 @@ day_sleep_actual = {
     'Saturday':10,
     'Sunday':9}
 
-  
 
-
-#Fix sleep_debt function. Keeps printing 'you need to get 5 more hours of sleep' regardless of argument.
 def sleep_debt(day):
     if day_sleep_actual[day] == day_sleep_ideal[day]:
         return 'You got the perfect amount of sleep'
@@ -30,8 +27,6 @@ def sleep_debt(day):
     else:
         return f'You need to get {day_sleep_ideal[day] - day_sleep_actual[day]} more hours of sleep'
             
-
-
 print(sleep_debt('Tuesday'))
 
 
